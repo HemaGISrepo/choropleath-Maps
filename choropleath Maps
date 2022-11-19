@@ -1,0 +1,4 @@
+# GeoDataFrame with geographical boundaries of Boston police districts
+districts_full = gpd.read_file('../input/geospatial-learn-course-data/Police_Districts/Police_Districts/Police_Districts.shp')
+districts = districts_full[["DISTRICT", "geometry"]].set_index("DISTRICT")
+districts.head()
